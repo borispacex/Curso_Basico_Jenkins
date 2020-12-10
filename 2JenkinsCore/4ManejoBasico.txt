@@ -1,0 +1,8 @@
+Se pueden crear nuevos usuarios y asignarles diferentes permisos, esto con el fin de poder saber en todo momento, o auditorías quien hizo que…
+
+Lo ideal es no compartir mismos usuarios ni misma contraseña.
+
+La autenticación se puede dar por medio de login con Github o Google, esto con el uso de plugins.
+
+Para crear, eliminar, editar un usuario:
+Ir a Manage Jenkins/ Manage Users/ Create user (en caso de crear). Para editar o borrar solo se debe dar clic en user id deseado, después elegir opción Configurar o Borra

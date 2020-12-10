@@ -1,0 +1,23 @@
+Jenkins es open source y probablemente el software de automatización más usado de todos, escrito en Java y corre en JVM. Es muy conveniente al ser una herramienta extensible al tener un ecosistema de plugins que te permiten extenderlo, puedes escribir tus propios plugins con Java, pero ya la comunidad ha desarrollado un sinfín de ellos.
+
+También nos permite escalar de manera horizontal y verticalmente, puede correr un sin número de trabajos concurrentemente en una sola máquina y si esa máquina no da abasto se le puede dar más recursos a Jenkins. O una máquina no es suficiente entonces Jenkins nos permite escalar horizontalmente con ““slaves”” y controlar varios nodos para que trabajen por él.
+
+Jenkins siempre esta siendo innovado y teniendo actualizaciones de seguridad, esto es importante porque es el target más grande de seguridad de una empresa porque lo tiene todo.
+
+Algo que Jenkins ha trabajado mucho en los últimos años es que puedes escribir tus ““jobs”” o unidades de trabajo en código. Nosotros queremos que nuestra automatización también sea programática, no solo los comando a ejecutar sino poder migrar nuestro trabajo a un nuevo Jenkins de manera reproducible. Han creado Pipelines as code
+
+
+RESUMEN
+Caracteristicas
+Es Open Source
+- Escrito en java sobre JVM
+- Mayormente se corre en Linux
+- Es extensible
+- Se puede escribir plugins en java
+- La comunidad aporta tanto escribiendo un sin fin de Plugins.
+- Jenkins es amigable y flexible por la cantidad de comunidad que tiene.
+- Compañias enormes tiene un solo jenkins
+- Jenkins puede crecer horizontalmente añadiendo mas hadware ya que soporta esto con el termino slaves.
+- Jenkins es un servicio de automatización.
+- CircleCI realiza lo mismo que jenkins.
+- Actualmente se puede escribir tu job con codigo y no solo con la interfaz.

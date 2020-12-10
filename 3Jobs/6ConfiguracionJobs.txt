@@ -1,0 +1,44 @@
+
+- Descripcion: ayuda a resolver cuando tienes un monton de jobs para describir.
+
+- Discard old builds: ayuda a resolver cuando muchas cosas se llenan en tu disco duro
+Days to keep builds: 365 dias --> quiero tener este build por un año
+Max # of builds to keep: 2 ---> guardar los ultimos dos builds 
+
+- This project is parameterized: Le puedes pasar parametros al build
+Add Parameter -> String Parameter
+Name: NAME
+Default Value: Boris Vargas
+Description: Descripcion
+
+- Disable this project: sumamente importante, si algo sale mal en un job y quieres que nadie lo corra (La mayor parte de jobs corren automaticos)
+
+**Source Code Management**
+Git: Añadir un repositorio
+Credentials: Credenciales
+(Usaremos un script para ejecutar esta parte)
+
+**Build Triggers**
+(Estuvimos ejecutando a mano)
+Trigger builds remotely (e.g., from scripts): Tienes para correrlo por una API
+Build after other projects are built: Si termino de ejecutar job A quiero correr job B, unicamente si job A fue estable.
+Build periodically: Acepta la sintaxis de un CRON jobs (Corre cada minuto cada X dia, 'si queremos que algo se ejecute sabado en la noche me corres este JOB')
+GitHub hook trigger for GITScm polling: Vamos usar futuramente, cuando tengamos un push en Github el job se va ejecutar
+
+**Build Environment**
+Delete workspace before build starts: (Importante que lo marquen) si tu corres tu job y modificas tu job y dejas files (algo) en la proxima ejecucion va estar. Queremos que el subfolder este limpio.
+Use secret text(s) or file(s): Para añadir secretos
+
+**Bindings**
+Llaves o variables de entorno o algo que no deberia estar expuesto a otros usuarios te permite guardarlo y accesarlo atraves de script.
+- Abort the build if it's stuck: Si el job que va a correr toda su vida, porque paso algo. (Si el job fallo o el S.O. fallo)
+Timeout minutes: 3 --> Si paso 3 minutos que cancele el build y falle (Poner como una variable global por comando)
+- Add timestamps to the Console Output: Marcar para ver el tiempo de ejecucion en consola
+
+**Build**
+Command: echo "Hello platzi $NAME"
+- Run with timeout: Si un comando demora mas, si un comando tarda demasiado le permites una ventaja mas de tiempo
+- Archive the artifacts: Vamos a usar en el futuro, watch others jobs y que se ejecute.
+
+
+

@@ -1,0 +1,46 @@
+Tengo una VPS Ubuntu 20.04 en Digital Ocean
+Como instalar Java en Ubuntu 20.04
+https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-20-04-es
+Como Instalar Jenkins en Ubuntu 20.04
+https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-20-04-es
+
+-- Actualizar repositorios
+sudo apt-get update
+sudo apt-get upgrade
+-- Instalar Java 11
+java -version
+sudo apt-get install default-jre
+sudo apt-get install default-jdk
+
+-- Añadir el repositorio donde se encuentra Jenkins
+sudo apt-get install wget
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
+
+-- Si necesitas instalar git
+sudo apt-get install git
+git --version
+
+-- No es requisito, pero creamos una llave SSH. Nos servira para bajar repositorios privados o cuando tenga que bajar dependencias privadas (Ejemplo un paquete de NPM que viene de GitHub), por eso es necesario autentificar.
+ssh-keygen
+
+-- Iniciar, Parar, Ver estado del servicio de Jenkins
+sudo systemctl start jenkins
+sudo systemctl stop jenkins
+sudo systemctl status jenkins
+
+-- Nos dirigimos a su direccion
+http://your_server_or_domain:8080
+
+-- mostramos la contraseña y la copiamos
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+-- Sugiere elegir la opcion Suggested
+
+-- Creamos nuestro primer adminitrador
+
+-- Se sugiere poner un dominio en Jenkins URL: http://domain:8080/
+
+
