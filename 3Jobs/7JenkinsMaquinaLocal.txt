@@ -1,0 +1,14 @@
+
+sudo apt-get update
+sudo apt-get install curl
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install -y nodejs
+node --version
+
+Podemos instalar cualquier otro lenguaje (PHP. PYTHON, ETC)
+
+
+- Jenkins trabaja con lo que tenga en la maquina instalado.
+- Jenkins puede instalar y guardarlo en el File System.
+- Jenkins puede hacer instalaciones el mismo.
+- Un arma de doble filo, tratemos de mantener todo portable. Si instalamos cosas por Jenkins tenemos que modificar la maquina en la que corre jenkins y si creamos otro jenkins 

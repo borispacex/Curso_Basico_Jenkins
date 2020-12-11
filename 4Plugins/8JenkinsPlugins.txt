@@ -1,0 +1,7 @@
+Jenkins y su ecosistema de Plugins
+Una de las razones por la cual Jenkins es adorado es porque tiene Plugins para una mayoría de cosas.
+
+Los plugins son unidades que extiende a Jenkins, después de instalarlo nuestra herramienta puede hacer algo nuevo, es recomendado instalarlos con la opción de ““Download now and Install after restart”” y así Jenkins se va a encargar de ejecutar todos los Jobs que estaban corriendo y cuando eso termine, lo va a instalar.
+
+
+
