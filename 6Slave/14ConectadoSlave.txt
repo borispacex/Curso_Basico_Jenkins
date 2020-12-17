@@ -1,0 +1,10 @@
+PASOS
+- añadimos llave.
+- Añadimos usuario (adduser jenkins)
+- Instalamos java ultima version
+- Creamos directorio de trabajo master y slave (/var/jenkins)
+- chwon jenkins:jenkins /var/jenkins
+- sudo su jenkins
+- cd $ -> verificamos que exista .ssh
+- Creamos archivo -> vim.ssh/authorized_keys
+- Copiamos key

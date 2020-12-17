@@ -1,0 +1,22 @@
+PASOS
+1. Creamos New Job
+2. Seleccionar Pipeline
+3. Build Trigger -> Github hook trigger for GITScm Polling
+4. Pipeline escribimos script o seleccionaos script.
+
+PASOS PIPE DECLARATIVO
+- Permite configuracion de jobs mediante codigo.
+- Tools: uso de plugins.
+- Options: Declaramos tiempos de ejecucion.
+- Stages: Pasos de ejecucion de codigo, dentro de los steps.
+
+- Pipeline Syntax, nos permite dar la sintaxis de nuestro step.
+
+- Con la opción Replay (disponible en el dashboard de cada buld dentro de un Job) NO hay necesidad de hacer un commit para volver a ejecutar algún build en un punto especifico, y además es posible modificar (y agregar) se puede cambiar los steps.
+
+
+stage('Run remote') {
+    steps {
+        build wait: false, job: 'parameterized', parameters: [string(name: 'ROOT_ID', value: '$BUILD_ID')]
+    }
+}

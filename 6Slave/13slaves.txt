@@ -1,0 +1,6 @@
+Los Slaves nos permiten correr Jobs distribuidamente. Se conecta al Jenkins master y este le delega trabajos al Slave como si fuese otra máquina puede ser virtual, física como quieras hacerlo, nos permite escalar horizontalmente.
+
+SLAVES
+- Permite la ejecucion de jobs distribuidamente.
+- Se conecta a jenkins master para delegar jobs.
+- Escala horizontalmente
